@@ -4,11 +4,11 @@ Flow helps you write readable Java.
 
 For example,
 
-    var balance1 = getBalanceForAccount(getAccountForCustomer(customer));
+    var balance = getBalanceForAccount(getAccountForCustomer(customer));
 
 becomes
 
-    var balance2 = Flow
+    var balance = Flow
                 .startWith(customer)
                 .andThen(this::getAccountForCustomer)
                 .andThen(this::getBalanceForAccount)
